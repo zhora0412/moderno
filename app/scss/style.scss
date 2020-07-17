@@ -54,6 +54,8 @@
     }
 }
 
+// start search
+
 .search{
     background-repeat: no-repeat;
     background-size: cover;
@@ -74,7 +76,7 @@
     &-text{
     font-size: 20px;
     margin-bottom: 50px;
-    font-weight: 500;
+    @include f500;
     line-height: 24px;
     }
     &-form{
@@ -89,12 +91,12 @@
             height: 56px;
             border: none;
             font-size: 14px;
-            font-weight: 500;
+            @include f500;
             padding-left: 20px;
             padding-right: 50px;
             &::placeholder{
                 color: #90a4ae;
-                font-weight: 500;
+                @include f500;
             }
         }
         button{
@@ -106,6 +108,8 @@
         }
     }
 }
+
+// start products
 
 .products{
     padding: 110px 0;
@@ -168,7 +172,7 @@
     &-title{
         color: $bg;
         line-height: 60px;
-        font-weight: 500;
+        @include f500;
         font-size: 18px;
         display: block;
     }
@@ -179,7 +183,7 @@
     }
     &-price{
         font-size: 20px;
-        font-weight: 700;
+        @include f700;
         color: $bg;
     }  
     &-info{
@@ -192,6 +196,7 @@
     &-author{
         display: flex;
         align-items: center;
+        max-width: 245px;
         .avatar{
             width: 30px;
             height: 30px;
@@ -205,6 +210,12 @@
         span{
             font-size: 14px;
             font-weight: 500;
+        }
+    }
+    &-star{
+        span{
+            color: $bg;
+            font-size: 12px;
         }
     }
 }
@@ -226,4 +237,127 @@
     }
 }
 
-  
+// start slider-----------------------
+
+.product-slider{
+    padding: 110px 0 120px;
+    .slick-dots{
+        text-align: center;
+        margin-top: 50px;
+        li{
+            display: inline-block;
+            margin-left: 3px;
+            margin-right: 3px;
+            &.slick-active{
+                button{
+                    background-color: $green;
+                }
+            }
+            button{
+                border: none;
+                border-radius: 50%;
+                background-color: rgb(232, 232, 232);
+                font-size: 0;
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+                outline: none;
+            }
+        }
+    }
+}
+
+// advantages
+
+.advantages{
+    background-color: $bg;
+    padding: 110px 0;
+}
+
+.advantages__title{
+    color: #fff;
+}
+
+.advantages__inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.advantages__item{
+    max-width: 370px;
+    text-align: center;
+    padding: 0 15px;
+    transition: all .3s;
+    &:hover{
+        .advantages__item-images{
+            background-color: $green;
+        }
+        .advantages__item-title{
+            color: $green;
+        }
+        .advantages__item-images{
+            g{
+                fill: #ffffff;
+            }
+        }
+    }
+    &-images{
+        width: 114px;
+        height: 114px;
+        background-color: #fff;
+        display: flex;
+        margin: 0 auto 30px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        transition: all .3s;
+    }
+    &-title{
+        margin-bottom: 25px;
+        color: #fff;
+        @include f500;
+        padding: 0px 15px;
+        font-size: 24px;
+        transition: all .3s;
+    }
+    &-text{
+        font-size: 15px;
+    }
+}
+
+// start autor
+
+.author{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__box{
+        max-width: 650px;
+        min-height: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $green;
+        width: 100%;
+    }
+    &__title{
+        font-size: 30px;
+        line-height: 30px;
+        color: #fff;
+        margin-right: 45px;
+        max-width: 270px;
+        span{
+            @include f700;
+        }
+    }
+    &__link{
+        font-size: 18px;
+        line-height: 30px;
+        padding: 14px 40px;
+        background-color: #fff;
+    }
+}
