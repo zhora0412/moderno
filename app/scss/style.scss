@@ -361,3 +361,195 @@
         background-color: #fff;
     }
 }
+
+// tutorial start
+
+.tutorial{
+    padding: 60px 0 120px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        max-width: 370px;
+        width: 100%;
+    }
+}
+
+.tutorial__item{
+    &-images{
+        min-height: 270px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    &-title{
+        @include f700;
+        background-color: #f8f8f8;
+        text-align: center;
+        font-size: 24px;
+        color: $bg;
+        padding: 30px 10px;
+    }
+}
+
+// start footer
+
+.footer{
+    background-color: $bg;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        padding: 100px 0px 80px;
+    }
+}
+
+.footer__copy{
+    border-top: solid 1px #919699;
+}
+
+.footer__copy-text{
+    text-align: center;
+    font-size: 15px;
+    color: #919699;
+    padding: 25px 0;
+}
+
+.footer__col{
+    max-width: 270px;
+    width: 100%;
+    &-menu{
+        max-width: 220px;
+    }
+    &-title{
+        font-size: 22px;
+        @include f700;
+        color: #ffffff;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            left: 2px;
+            bottom: 0;
+            width: 51px;
+            height: 3px;
+            background-color: $green;
+        }
+    }
+    &-text{
+        color: #b7c3c8;
+        margin-bottom: 30px;
+    }
+}
+.footer__info{
+    margin-top: 18px;
+    color: #ffffff;
+    @include f500;
+    padding-left: 30px;
+    position: relative;
+    &::before{
+        content: "\f041";
+        font-family: 'icomoon';
+        color: $green;
+        font-size: 18px;
+        position: absolute;
+        left: 0;
+    }
+}
+.footer__info-phone{
+    &::before{
+        content: "\f095";
+        font-family: 'icomoon';
+    }
+}
+
+.footer__col-list{
+    a{
+        color: #b7c3c8;
+        margin-bottom: 13px;
+        padding-left: 22px;
+        position: relative;
+        &::before{
+            content: "\f105";
+            font-family: 'icomoon';
+            position: absolute;
+            left: 0;
+            font-size: 18px;
+            color: $green;
+        }
+    }
+}
+
+.footer__social-link{
+    margin-bottom: 33px;
+    li{
+        display: inline-block;
+        &+li{
+            margin-left: 7px;
+        }
+    }
+    a{
+        width: 28px;
+        height: 28px;
+        background-image: url(../images/content/css_sprites.png);
+    }
+}
+
+
+.link-twitter{
+background-position: -28px 0;
+}
+.link-youtube{
+    background-position: 0 -28px;
+}
+.link-pinterest{
+    background-position: -28px -28px;
+}
+.link-linledin{
+    background-position: -56px 0;
+}
+
+.footer__form-title{
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-size: 20px;
+    @include f500;
+}
+
+.footer__form{
+    position: relative;
+    input{
+        border: none;
+        background-color: #2f3c43;
+        display: block;
+        width: 100%;
+        height: 40px;
+        color: #fff;
+        font-size: 14px;
+        padding: 0 50px 0 13px;
+        &::placeholder{
+            color: #697378;
+        }
+    }
+    button{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: $green;
+        border: none;
+        height: 40px;
+        width: 43px;
+        cursor: pointer;
+        &::before{
+            content: '\f124';
+            position: absolute;
+            font-family: 'icomoon';
+            top: 11px;
+            left: 13px;
+            color: #ffffff;
+            font-size: 20px;
+        }
+    }
+}
