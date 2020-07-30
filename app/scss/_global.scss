@@ -76,6 +76,7 @@ body{
     font-size: 15px;
     line-height: 24px;
     color: $text;
+    overflow-x: hidden;
 }
 
 .rate-star{
@@ -115,3 +116,16 @@ body{
 }
 
 // хлебл=ные крошки
+
+.angle-right{
+    position: relative;
+    padding-left: 15px;
+    &::before{
+        content: "\f105";
+        font-family: 'icomoon';
+        color: $green;
+        left: 0;
+        position: absolute;
+        font-size: 14px;
+    }
+}
