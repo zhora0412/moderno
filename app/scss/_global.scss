@@ -14,6 +14,21 @@ body {
 	height: 100%;
 }
 
+body{
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: $text;
+    min-width: 320px;
+}
+
+.wrapper{
+    overflow-x: hidden;
+    position: relative;
+}
+
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -68,15 +83,6 @@ li{
 
 .page-content{
     background-color: $grey;
-}
-
-body{
-    font-family: 'Roboto-Regular', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 24px;
-    color: $text;
-    overflow-x: hidden;
 }
 
 .rate-star{
